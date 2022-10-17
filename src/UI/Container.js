@@ -12,12 +12,16 @@ const Container = styled.section`
 
   @media screen and (max-width: 800px) {
     max-width: 600px;
+    margin: auto;
   }
   @media screen and (max-width: 700px) {
     width: 500px;
+    margin: auto;
   }
   @media screen and (max-width: 600px) {
-    width: 450px;
+    width: 90%;
+    margin: auto;
+    //450px;
   }
 `;
 

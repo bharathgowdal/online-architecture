@@ -20,7 +20,7 @@ const Header = () => {
           <ul className="nav_items_wrapper">
             <li className="nav_item">
               {!click ? (
-                <FlexRow>
+                <FlexRow className="login-signup">
                   <span>
                     <HiUser />
                   </span>
@@ -62,13 +62,20 @@ const Menu = styled.div`
   top: 5px;
   right: 5px;
   width: 40vw;
-  background: rgba(249, 235, 0, 0.3);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 2rem;
   height: 98vh;
   li {
     padding: 2rem;
     font-size: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.9);
+    li {
+      font-size: 30px;
+    }
   }
 `;
 const Section = styled.div`
@@ -124,5 +131,10 @@ const Section = styled.div`
   }
   .menu span {
     padding-left: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    .login-signup {
+      display: none;
+    }
   }
 `;

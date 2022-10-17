@@ -10,9 +10,9 @@ import { GrPinterest } from "react-icons/gr";
 const Footer = () => {
   return (
     <Section>
-      <FlexRow className="footer">
+      <FlexRow className="footer column">
         <img src={Logo} className="logo" />
-        <FlexRow>
+        <FlexRow className="pages column">
           <FlexColumn>
             <span>Home</span>
             <span>About</span>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
         </FlexColumn>
       </FlexRow>
-      <FlexRow className="copyrights">
+      <FlexRow className="copyrights column">
         <div>Copyrights 2019 - All rights reserved</div>
         <div>Designed & Developed by EASTSHINE IT SOLUTIONS</div>
       </FlexRow>
@@ -111,5 +111,15 @@ const Section = styled.div`
   }
   .p_logo {
     color: #d00000;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      flex-direction: column;
+    }
+    .pages {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 `;

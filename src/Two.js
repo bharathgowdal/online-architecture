@@ -32,7 +32,6 @@ const Two = () => {
         setFloorDetails([...floorDetails, { label: `Floor ${i}` }]);
       }
     }
-    console.log(floorDetails);
   }, [noOfFloor, setNoOfFloor, basement, setBasement, ground, setGround]);
 
   return (
@@ -77,7 +76,7 @@ const Two = () => {
             />
           </FlexRow>
           <table>
-            <thead>
+            <thead className="hide">
               <tr>
                 <th>No. Floors</th>
                 <th>Details</th>
@@ -87,7 +86,7 @@ const Two = () => {
             <tbody>
               {floorDetails.map((value, i) => {
                 return (
-                  <tr key={i}>
+                  <tr key={i} className="responsive">
                     <td>
                       <label>{value.label}:</label>
                     </td>
@@ -105,13 +104,12 @@ const Two = () => {
                         </span>
                       </FlexColumn>
                     </td>
+                    <div className="divider" />
                   </tr>
                 );
               })}
             </tbody>
           </table>
-
-          {/* discription */}
 
           <FlexColumn>
             <Button>PROCEED</Button>
@@ -128,6 +126,11 @@ const Section = styled.div`
   position: relative;
   font-size: 16px;
   margin-top: 2rem;
+  .divider {
+    margin-bottom: 20px;
+    width: 100%;
+    border-bottom: 2px dashed black;
+  }
   .details {
     margin-bottom: 20px;
     font-size: 22px;
@@ -187,5 +190,32 @@ const Section = styled.div`
   Button {
     margin-top: 50px;
     margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 1rem;
+    .details {
+      font-size: 1rem;
+    }
+    .hide {
+      display: none;
+    }
+    .responsive {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    Button {
+      margin: 10px;
+    }
+    table {
+      width: 80vw;
+    }
+    th {
+      padding: 10px;
+    }
+    td {
+      padding: 10px;
+    }
   }
 `;

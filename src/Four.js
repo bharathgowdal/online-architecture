@@ -14,7 +14,7 @@ const Four = () => {
     <Section>
       <Container>
         <Numbered>4</Numbered>
-        <FlexRow>
+        <FlexRow className="flex-direction">
           <FlexColumn>
             <img src={Logo} className="logo" />
             <img src={Sketch} className="sketch" />
@@ -98,5 +98,13 @@ const Section = styled.div`
   .f_logo {
     font-size: 18px;
     color: #0036fd;
+  }
+  @media screen and (max-width: 700px) {
+    .flex-direction {
+      flex-direction: column;
+    }
+    .sketch {
+      padding-top: 20px;
+    }
   }
 `;

@@ -40,7 +40,8 @@ const Relax = () => {
 export default Relax;
 
 const Section = styled.div`
-  padding-top: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
   .relax {
     font-size: 32px;
     font-weight: bold;

@@ -188,4 +188,25 @@ const Section = styled.div`
     margin-top: 50px;
     margin-bottom: 20px;
   }
+  @media screen and (max-width: 600px) {
+    .site_msr {
+      flex-direction: column;
+    }
+    .site_msr_select {
+      margin: 10px 0;
+    }
+    .total_msr {
+      flex-direction: column;
+    }
+    .total_val {
+      margin: 10px 0;
+    }
+    .facing {
+      flex-direction: column;
+      margin: 10px 0;
+    }
+    .news_image {
+      margin: auto;
+    }
+  }
 `;

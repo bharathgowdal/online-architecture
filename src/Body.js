@@ -13,7 +13,7 @@ const Body = () => {
       <FlexColumn>
         <One />
         <Two />
-        <Three />
+        {/* <Three /> */}
         <Four />
         <Relax />
       </FlexColumn>
